@@ -30,6 +30,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/todos', todoRoutes);
 app.use('/api/sessions', sessionRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the To-Do API!');
+});
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
